@@ -47,6 +47,6 @@ Face detection using Python and Tensorflow. I created a face detection algorithm
 |── utils.py<br>
 
 # References
-Pre-trained tensorflow model was found online via the provided link.
-https://github.com/yeephycho/tensorflow-face-detection/tree/master/model
+Pre-trained tensorflow model was found online via the provided link. <br>
+https://github.com/yeephycho/tensorflow-face-detection/tree/master/model <br>
 https://github.com/yeephycho/tensorflow-face-detection/tree/master/protos
