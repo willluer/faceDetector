@@ -28,13 +28,13 @@ Face detection using Python and Tensorflow. I created a face detection algorithm
 
 
 ### File Structure:
-#####faceDetector/:
+##### faceDetector/:
 #####  +--- data/
-#####  |  +--- sampleFace.jpg
-#####  |  +--- trackingSample.avi
+#####  |&nbsp;+--- sampleFace.jpg
+#####  |&nbsp;+--- trackingSample.avi
 #####  |
 #####  +--- model/
-#####  |  +---frozen_inference_graph_face.pb
+#####  |&nbsp;+---frozen_inference_graph_face.pb
 #####  |
 #####  +--- protos
 #####  +--- detectAndTrack.py
