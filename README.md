@@ -29,21 +29,21 @@ Face detection using Python and Tensorflow. I created a face detection algorithm
 
 ### File Structure:
 
-├── README.md<br>
-├── data<br>
-│&emsp;&emsp;&ensp;├── sampleFace.jpg<br>
-│&emsp;&emsp;&ensp;└── trackingSample.avi<br>
-├── model<br>
-│&emsp;&emsp;&ensp;└── frozen_inference_graph_face.pb<br>
-├── protos<br>
-│&emsp;&emsp;&ensp;├── __init__.py<br>
-│&emsp;&emsp;&ensp;├── face_label_map.pbtxt<br>
-│&emsp;&emsp;&ensp;└── string_int_label_map_pb2.py<br>
-├── detectAndTrack.py<br>
-├── detector.py<br>
-├── TensorflowFaceDetector.py<br>
-├── __init__.py<br>
-└── utils.py<br>
+|── README.md<br>
+|── data<br>
+|&emsp;&emsp;&ensp;|── sampleFace.jpg<br>
+|&emsp;&emsp;&ensp;|── trackingSample.avi<br>
+|── model<br>
+|&emsp;&emsp;&ensp;|── frozen_inference_graph_face.pb<br>
+|── protos<br>
+|&emsp;&emsp;&ensp;|── __init__.py<br>
+|&emsp;&emsp;&ensp;|── face_label_map.pbtxt<br>
+|&emsp;&emsp;&ensp;|── string_int_label_map_pb2.py<br>
+|── detectAndTrack.py<br>
+|── detector.py<br>
+|── TensorflowFaceDetector.py<br>
+|── __init__.py<br>
+|── utils.py<br>
 
 # References
 Pre-trained tensorflow model was found online via the provided link.
