@@ -12,7 +12,7 @@ Face detection using Python and Tensorflow. I created a face detection algorithm
 ## Usage
 #### Face detection on supplied image path:
   python3 detector.py -s/--source [path]<br>
-  ex.) python3 detector.py -s data/sampleFace.jpg
+  <b>Ex.)</b> python3 detector.py -s data/sampleFace.jpg
 
 #### Face detection from webcam:
   python3 detector.py -s/--source 0<br>
@@ -20,11 +20,11 @@ Face detection using Python and Tensorflow. I created a face detection algorithm
 
 ### Face detection/tracking on supplied video path:
   python3 detectAndTrack.py -s/--source [path]<br>
-  ex.) python3 detectAndTrack.py -s data/trackingSample.avi
+  <b>Ex.)</b> python3 detectAndTrack.py -s data/trackingSample.avi
 
 ### Face detection/Tracking from webcam:
   python3 detector.py -s/--source 0<br>
-  ex.) python3 detectAndTrack.py -s 0
+  <b>Ex.)</b> python3 detectAndTrack.py -s 0
 
 
 ### File Structure:
@@ -44,7 +44,6 @@ Face detection using Python and Tensorflow. I created a face detection algorithm
 |── detectAndTrack.py<br>
 |── detector.py<br>
 |── TensorflowFaceDetector.py<br>
-|── __init__.py<br>
 |── utils.py<br>
 
 # References
