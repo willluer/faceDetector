@@ -33,12 +33,14 @@ Face detection using Python and Tensorflow. I created a face detection algorithm
 |── data<br>
 |&emsp;&emsp;&ensp;|── sampleFace.jpg<br>
 |&emsp;&emsp;&ensp;|── trackingSample.avi<br>
+|<br>
 |── model<br>
 |&emsp;&emsp;&ensp;|── frozen_inference_graph_face.pb<br>
+|<br>
 |── protos<br>
-|&emsp;&emsp;&ensp;|── __init__.py<br>
 |&emsp;&emsp;&ensp;|── face_label_map.pbtxt<br>
 |&emsp;&emsp;&ensp;|── string_int_label_map_pb2.py<br>
+|<br>
 |── detectAndTrack.py<br>
 |── detector.py<br>
 |── TensorflowFaceDetector.py<br>
