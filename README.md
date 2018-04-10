@@ -31,9 +31,9 @@ Face detection algorithm using Python and Tensorflow. I created a face detection
 
 ### File Structure:
 
-|── data/<br>
-|&emsp;&emsp;&ensp;|── sampleFace.jpg<br>
-|&emsp;&emsp;&ensp;|── trackingSample.avi<br>
+|── data/
+|&emsp;&emsp;&ensp;|── sampleFace.jpg
+|&emsp;&emsp;&ensp;|── trackingSample.avi
 |── results/<br>
 |&emsp;&emsp;&ensp;|── detectorResults.png<br>
 |&emsp;&emsp;&ensp;|── detectAndTrackResults.avi<br>
