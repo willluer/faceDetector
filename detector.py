@@ -7,6 +7,17 @@ import tensorflow as tf
 from TensorflowFaceDetector import TensorflowFaceDetector
 from utils import readImageFromFile,readVideoCapture, boxConvert
 
+'''
+Facial Detection for still image
+
+Reads image from source and outputs bounding box
+INPUT: image source
+OUTPUT: bounding box of form [x1,y1,x2,y2]
+
+Usage:
+python3 detector.py -s/--source [path]
+[path] is either a path to a file or 0 to use local webcam
+'''
 # Path to frozen detection graph. This is the actual model that is used for the object detection.
 PATH_TO_CKPT = './model/frozen_inference_graph_face.pb'
 

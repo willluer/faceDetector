@@ -6,38 +6,43 @@ William Luer - 4/9/2018
    - OpenCV
    - Numpy
 
-## Description
-Face detection using Python and Tensorflow. I created a face detection algorithm that is capable of calculating a bounding box from a local image or from your local webcam (detector.py). I also implemented a facial tracking algorithm that uses the bounding box found in detector.py and passes it to a MedianFlow tracking algorithm (detectAndTrack.py). A sample photo and video are provided in the data folder. The photo may be used as input to detector.py and the vidoe may be used as input to detecAndTrack.py.
+## Description:
+Face detection algorithm using Python and Tensorflow. I created a face detection algorithm that calculates a bounding box from a local image or from your local webcam (detector.py). Additionally, I implemented a facial tracking algorithm that uses the bounding box found in detector.py and passes it to a MedianFlow tracking algorithm (detectAndTrack.py).
 
-## Usage
-#### Face detection on supplied image path:
+
+## Usage:
+
+1. **Face detection on supplied image path:** <br>
   python3 detector.py -s/--source [path]<br>
-  <b>Ex.)</b> python3 detector.py -s data/sampleFace.jpg
+  ex.) python3 detector.py -s data/sampleFace.jpg
 
-#### Face detection from webcam:
+2. **Face detection from webcam:**<br>
   python3 detector.py -s/--source 0<br>
-  <b>Ex.)</b> python3 detector.py -s 0
+  ex.) python3 detector.py -s 0
 
-### Face detection/tracking on supplied video path:
+3. **Face detection/tracking on supplied video path:**<br>
   python3 detectAndTrack.py -s/--source [path]<br>
-  <b>Ex.)</b> python3 detectAndTrack.py -s data/trackingSample.avi
+  ex.) python3 detectAndTrack.py -s data/trackingSample.avi
 
-### Face detection/Tracking from webcam:
+4. **Face detection/Tracking from webcam:**<br>
   python3 detector.py -s/--source 0<br>
-  <b>Ex.)</b> python3 detectAndTrack.py -s 0
+  ex.) python3 detectAndTrack.py -s 0
 
 
 ### File Structure:
 
-|── README.md<br>
-|── data<br>
+|── data/<br>
 |&emsp;&emsp;&ensp;|── sampleFace.jpg<br>
 |&emsp;&emsp;&ensp;|── trackingSample.avi<br>
 |<br>
-|── model<br>
+|── results/<br>
+|&emsp;&emsp;&ensp;|── detectorResults.png<br>
+|&emsp;&emsp;&ensp;|── detectAndTrackResults.avi<br>
+|<br>
+|── model/<br>
 |&emsp;&emsp;&ensp;|── frozen_inference_graph_face.pb<br>
 |<br>
-|── protos<br>
+|── protos/<br>
 |&emsp;&emsp;&ensp;|── face_label_map.pbtxt<br>
 |&emsp;&emsp;&ensp;|── string_int_label_map_pb2.py<br>
 |<br>
@@ -45,6 +50,16 @@ Face detection using Python and Tensorflow. I created a face detection algorithm
 |── detector.py<br>
 |── TensorflowFaceDetector.py<br>
 |── utils.py<br>
+|── README.md<br>
+
+
+
+## Sample Data
+A sample photo and video are provided in the data folder. The photo may be used as input to detector.py and the video may be used as input to detectAndTrack.py.
+
+## Results
+The results of detector.py and detectAndTrack.py run on the sample data provided can be found in the results folder.
+
 
 # References
 Pre-trained tensorflow model was found online via the provided link. <br>

@@ -4,8 +4,19 @@ import time
 import argparse
 from os.path import exists
 from detector import DetectionManager
-from MedianFlowTracker import MedianFlowTracker
 
+'''
+Facial Tracking for video source
+
+Takes in a bounding box and video source and tracks the box in corresponding frames.
+INPUT: Bounding box of form [x1,y1,x2,y2], video source
+OUTPUT: Visualization of Medainflow tracking algorithm
+
+Usage:
+python3 detectAndTrack.py -s/--source [path]
+[path] is either a path to a file or 0 to use local webcam
+
+'''
 class trackingManager(object):
 	def __init__(self,bb,source):
 		self.source = cv2.VideoCapture(source)
@@ -14,14 +25,15 @@ class trackingManager(object):
 		self.previous = None
 		self.current = None
 
+		#Convert bounding box to usable form: (x1, y1, xSpan, ySpan)
 		x1,y1,x2,y2 = bb
-		#bb is of the form (x1, y1, xSpan, ySpan)
 		bb = (bb[0],bb[1],bb[2]-bb[0],bb[3]-bb[1])
 		self.boundingBox = bb
 
 	def run(self,bb,source):
 		time.sleep(1)
 		ret, prev = self.source.read()
+		width,height,_ = np.shape(prev)
 
 		if not ret:
 			print("[ERROR] Unable to read from source")
@@ -40,6 +52,7 @@ class trackingManager(object):
 
 			# Read new frame
 			ret, frame = self.source.read()
+
 			if not ret:
 				print("[INFO] Video stream has ended")
 				break
@@ -69,7 +82,8 @@ class trackingManager(object):
 			# Display FPS on frame
 			cv2.putText(frame, "FPS : " + str(int(fps)), (100,50), cv2.FONT_HERSHEY_SIMPLEX, 0.75, (50,170,50), 2);
 			cv2.imshow(self.windowName, frame)
-			k = cv2.waitKey(1) & 0xff
+
+			k = cv2.waitKey(1)
 			self.previous = curr
 			if k == 27 :
 				break
@@ -95,6 +109,7 @@ if __name__ == "__main__":
 	flag,bb,frame = DetectionManager(source,"video").run(source)
 	if flag:
 		print("[INFO] Initiating MedianFlow tracker")
+		print("[USAGE] Press ESC to end the stream")
 		trackingManager(bb,source).run(bb,source)
 	else:
 		print("[RESULTS] No face detected")

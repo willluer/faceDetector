@@ -2,6 +2,21 @@ import cv2
 import numpy as np
 import time
 
+'''
+Utility functions used by detector.py
+1. readImageFromFile
+	INPUT: path to file
+	OUTPUT: image array, width, height
+
+2. readVideoCapture
+	INPUT: video source
+	OUTPUT: image array, width, height
+
+3. boxConvert
+	INPUT: Normalized box array and image dimensions
+	OUTPUT: True pixel coordinates of bounding box
+'''
+
 # Input: path to image
 # Output: img array, img width, img height
 def readImageFromFile(path):

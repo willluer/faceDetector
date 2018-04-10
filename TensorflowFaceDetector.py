@@ -3,6 +3,12 @@ import cv2
 import numpy as np
 import time
 
+'''
+Face Detection Class
+Trained using Tensorflow and obtained from:
+https://github.com/yeephycho/tensorflow-face-detection/tree/master/
+
+'''
 class TensorflowFaceDetector(object):
 	def __init__(self, PATH_TO_CKPT):
 		self.detection_graph = tf.Graph()
